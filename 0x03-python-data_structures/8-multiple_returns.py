@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 def multiple_returns(sentence):
-	my tuple = ()
-	if len(sentence) == 0:
+	my_tuple = ()
+	if len(sentence == 0):
 		my_tuple = 0, "None"
 	else:
 		my_tuple = len(sentence), sentence[0]
