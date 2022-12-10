@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 q_add(my_list=[]):
     unique = []
     for i in my_list:
