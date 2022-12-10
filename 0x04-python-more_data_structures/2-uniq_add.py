@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-q_add(my_list=[]):
-    unique = []
-    for i in my_list:
-        if i not in unique:
-            unique.append(i)
-    return sum(unique)
+def uniq_add(my_list=[]):
+    uniq_list = set(my_list)
+    num = 0
+
+    for i in uniq_list:
+        num += i
+
+    return (num)
