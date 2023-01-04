@@ -20,5 +20,9 @@ class LockedClass():
     AttributeError: 'LockedClass' object has no attribute 'last_name
     """
 
-    __slots__ = ['first_name']
+    __slots__ = ["first_name"]
+
+    def __init__(self, first_name=""):
+        """Creates a LockedClass instance"""
+        self.first_name = first_name
                                                                     
