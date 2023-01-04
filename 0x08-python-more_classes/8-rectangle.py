@@ -12,7 +12,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-    """returns the biggest rectangle based on the area"""
+        """returns the biggest rectangle based on the area"""
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
@@ -22,7 +22,7 @@ class Rectangle:
         return rect_2
 
     def __init__(self, width=0, height=0):
-    """Initializes the rectangle"""
+        """Initializes the rectangle"""
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
@@ -38,7 +38,7 @@ class Rectangle:
         return self.__width
 
     @width.setter
-        def width(self, value):
+    def width(self, value):
         """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -52,7 +52,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-        def height(self, value):
+    def height(self, value):
         """setter for the private instance attribute height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
@@ -79,5 +79,5 @@ class Rectangle:
         return string
 
     def __repr__(self):
-    """returns a string representation of the rectangle for reproduction"""
+        """returns a string representation of the rectangle for reproduction"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)

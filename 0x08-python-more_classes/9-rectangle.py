@@ -16,7 +16,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-    """returns the biggest rectangle based on the area"""
+        """returns the biggest rectangle based on the area"""
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
@@ -37,12 +37,12 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
     @property
-        def width(self):
+    def width(self):
         """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
-        def width(self, value):
+    def width(self, value):
         """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -51,31 +51,31 @@ class Rectangle:
         self.__width = value
 
     @property
-        def height(self):
+    def height(self):
         """getter for the private instance attribute height"""
-            return self.__height
+        return self.__height
 
     @height.setter
-        def height(self, value):
-            """setter for the private instance attribute height"""
-            if type(value) is not int:
-                raise TypeError("height must be an integer")
-            if value < 0:
-                raise ValueError("height must be >= 0")
-            self.__height = value
+    def height(self, value):
+        """setter for the private instance attribute height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
-    """returns the area of the rectangle"""
+        """returns the area of the rectangle"""
         return self.__width * self.__height
 
     def perimeter(self):
-    """returns the perimeter of the rectangle"""
+        """returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-    """returns printable string representation of the rectangle"""
+        """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
             string += "\n".join(str(self.print_symbol) * self.__width

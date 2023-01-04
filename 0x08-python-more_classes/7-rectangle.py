@@ -17,17 +17,17 @@ class Rectangle:
         Rectangle.number_of_instances += 1
 
     def __del__(self):
-    """prints a string when an instance has been deleted"""
+        """prints a string when an instance has been deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
-    """getter for the private instance attribute width"""
+        """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
-        def width(self, value):
+    def width(self, value):
         """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
@@ -37,7 +37,7 @@ class Rectangle:
 
     @property
     def height(self):
-    """getter for the private instance attribute height"""
+        """getter for the private instance attribute height"""
         return self.__height
 
     @height.setter

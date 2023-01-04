@@ -7,3 +7,4 @@ class Rectangle:
     """
     The class rectangle
     """
+    pass
